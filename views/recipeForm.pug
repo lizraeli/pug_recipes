@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  form(class='ui form' action='/recipes/new' method='post')
+    div(class='field')
+      label Recipe Name
+      input(type='text', name='name', placeholder="Recipe Name" required)
+    div(class='field')
+      label Image URL
+      input(type='text', name='ImageURL', placeholder="www...")
+    div(class='field')
+      label Ingredients
+      textarea(name='ingredients', required)
+    div(class='field')
+      label Steps
+      textarea(name='steps', required)
+    button(class='ui button', type='submit') submit 

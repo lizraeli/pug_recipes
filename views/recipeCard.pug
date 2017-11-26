@@ -1,0 +1,22 @@
+
+
+mixin recipeCard(recipe)
+  // Setting default values using ES6 object destructuring
+  - const { ingredients = [], steps = [], name, id, imageURL } = recipe;
+  
+  div(class='ui fluid card')
+    div(class='content')
+      a(class='header' href=`recipes/id/${id}`) #{name}
+      img(class='ui medium image' src=imageURL, alt="image")
+      h3(class = 'meta') Ingredients
+      div(class = 'description')
+        ol(class='ui ordered list') 
+          each ingredient in ingredients
+            li(class='item') #{ingredient}
+      h3(class = 'meta') Steps
+      div(class = 'description')
+        ul(class='ui bulleted list') 
+          each step in steps
+            li(class='item') #{step}
+
+  

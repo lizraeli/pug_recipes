@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  h1 Recipes
+  +recipeList(recipes)
+
+mixin recipeList(recipes) 
+  include recipeCard.pug
+  each recipe in recipes
+    +recipeCard(recipe)

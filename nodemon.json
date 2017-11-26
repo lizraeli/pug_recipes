@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "model/*.*"
+  ],
+  "ext": "js jsx"
+}
